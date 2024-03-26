@@ -1,3 +1,16 @@
+# Machine Learning Model Deployment on GCE and Kubernetes
+
+This project demonstrates deploying a logistic regression-based machine learning model on Google Compute Engine (GCE) and Kubernetes. It covers setting up a GCE instance, containerizing the application with Docker, and managing deployment with Kubernetes for scalability and maintenance. The model aims to predict customer online purchasing behavior, showcasing modern cloud-based deployment strategies for machine learning applications.
+
+
+
+## Authors
+
+- [@faniels](https://www.github.com/octokatherine)
+
+
+## Implementation Steps
+Now that we've outlined what the project entails, let's dive into the detailed steps for executing it. Follow these steps to set up the environment, deploy the application, and manage the deployment efficiently:
 
 ### 1.	Create Instance on Google Compute Engine (GCE):
 
