@@ -6,7 +6,7 @@ This project demonstrates deploying a logistic regression-based machine learning
 
 ## Authors
 
-- [@faniels](https://www.github.com/octokatherine)
+- [@faniels](https://www.github.com/faniels)
 
 
 ## Implementation Steps
@@ -46,11 +46,11 @@ This will allow you to manage and version control your project effectively.
 
 ```git commit -m "Initial commit"```
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![](./screenshots/1.png)
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![](./screenshots/2.png)
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![](./screenshots/3.png)
 
 
 ### 4.	Proceed to Kubernetes
@@ -67,7 +67,7 @@ The below command will dynamically fetche the current project ID and zone of the
 
 You should see three nodes being created as shown below.
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![](./screenshots/4.png)
 
 ### 6.	Build a Docker image using the Dockerfile in the current directory.
 
@@ -83,19 +83,19 @@ You should see three nodes being created as shown below.
 - Build the docker image
 ```docker build -t gke-ml-app .```
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![](./screenshots/5.png)
 
 - Tag the Docker image with your Docker Hub username and repository name:
 
 ```sudo docker tag gke-ml-app faniels/gke-ml-app:latest```
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![](./screenshots/6.png)
 
 - Push your docker image to docker hub.
 
 ```Sudo docker push repo-name/image-name```
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![](./screenshots/7.png)
 
 ### 7.	Next, create a Kubernetes Deployment YAML to manage the application's pods. 
 
@@ -107,7 +107,7 @@ This YAML file defines the desired state for your application, including the num
 
 ```kubectl apply -f deployment.yaml```
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![](./screenshots/8.png)
 
 
 ### 9. Verify that the pods are created successfully using the following commands:
@@ -116,13 +116,13 @@ This YAML file defines the desired state for your application, including the num
 
 ```kubectl get pods```
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![](./screenshots/9.png)
 
 ### 10.	 Create a Kubernetes Service
 
 Now that the application is running inside pods managed by the deployment, we need to expose it to external traffic using a Kubernetes Service. This will provide a stable endpoint to access the application.
 
-Define the Service YAML Configuration: Create a YAML file specifying the details of the Service. 
+Create a YAML file specifying the details of the Service. 
 
 *N.B refer to service.yaml in the GitHub repository for details of the file.*
 
@@ -130,7 +130,7 @@ Define the Service YAML Configuration: Create a YAML file specifying the details
 
 ```Kubectl apply -f service.yaml```
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![](./screenshots/10.png)
 
 ### 12.	Verify the Service: 
 
@@ -140,13 +140,13 @@ After creating the Service, verify that it's running correctly using the below c
 
 You should see the external IP address assigned to the LoadBalancer.
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![](./screenshots/11.png)
 
 ### 13.	Access your application using the external IP address provided by the LoadBalancer.
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![](./screenshots/12.png)
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![](./screenshots/13.png)
 
 ### 14.	Optionally, you can stop the Kubernetes Deployment
 
@@ -155,3 +155,24 @@ To stop the deployment, you can delete the deployment and service using the belo
 ```kubectl delete deployment flask-app```
 
 ```kubectl delete service my-flask-app```
+
+
+
+
+## Next Steps and Contributions
+
+If you have any ideas to improve and expand this project, bug reports, or want to contribute, please feel free to open an issue or submit a pull request.
+
+## Acknowledgments
+
+Special thanks to Pramod Singh for the valuable insights and guidance provided in his book "Deploy Machine Learning Models to Production: With Flask, Streamlit, Docker, and Kubernetes on Google Cloud Platform, 1st ed."
+
+## Show Your Support
+
+If you found this project helpful or interesting, please give it a ⭐️ on GitHub. This not only provides motivation but also helps others discover it!
+
+## Contact
+
+For any queries or collaborations, feel free to contact me. You can find my contact details on [GitHub](https://www.github.com/faniels).
+
+Thank you for checking out this project!
